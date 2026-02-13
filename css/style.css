@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    background: #000428;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    overflow: scroll;
+    background-attachment: fixed;
+}
+
+.stars {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: white;
+    box-shadow: 
+        100px 200px white,
+        300px 100px white,
+        500px 300px white,
+        700px 150px white,
+        900px 400px white,
+        200px 500px white,
+        400px 50px white,
+        600px 250px white,
+        800px 450px white,
+        150px 350px white,
+        /* Agrega más coordenadas para más estrellas */
+        1200px 100px white,
+        1400px 300px white,
+        250px 150px white,
+        450px 400px white,
+        650px 200px white;
+    animation: twinkle 3s infinite;
+        }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Capa adicional de estrellas más pequeñas */
+.stars-small {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: white;
+    box-shadow: 
+        120px 180px white,
+        320px 120px white,
+        520px 320px white,
+        720px 170px white,
+        920px 420px white;
+    animation: twinkle 2s infinite;
+}
+
+.glass {
+            border-radius: 1rem;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px); /* Safari */
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+
+header{
+    margin: 1rem;
+    position: fixed;
+    padding: 1rem;
+    height: 5rem;
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 1;
+    z-index: 9999;
+}
+
+.profile{
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    height: 100%;
+}
+.profile img{
+    border: none;
+    width: auto;
+    height: 100%;
+    border-radius: 61% 36% 29% 68% / 47% 48% 44% 34%;
+    transition: border-radius 0.5s ease, transform 0.3s ease, filter 0.3s ease;
+}
+.profile img:hover{
+    cursor: pointer;
+    border-radius: 17% 52% 35% 40% / 22% 33% 53% 57%;
+}
+
+nav{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+nav ul{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav ul li{
+    background-color: transparent;
+    list-style: none;
+    width: 30%;
+    height: 100%;
+    font-size: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}  
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms ease, color 200ms ease, filter 200ms ease;
+    will-change: transform, color;
+} 
+nav ul li a:hover{
+    color: #96a9c7;
+    cursor: pointer;
+    transform: translateY(-10%);
+}
+
+.more{
+    background-color: transparent;
+    transition: all 300ms ease;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.001rem;
+    border: none;
+    padding: 0.7rem 0.5rem;
+}
+.more hr{
+    background-color: white;
+    width: 1rem;
+    height: 0.1rem;
+    border: none;
+    border-radius: 1rem;
+}
+.more:hover{
+    cursor: pointer;
+    background-color: rgba(183, 183, 183, 0.2);
+}
+.more:hover hr{
+    background-color: #96a9c7;
+}   
+
+main{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+}
+
+.screen_1{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home_space{
+    background-color: transparent;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
+    height: 5rem;
+    width: calc(100% - 2rem);
+}
+
+h1{
+    margin: auto;
+    font-size: 3rem;
+    font-weight: normal;
+}
+h1 a{
+    text-decoration: none;
+}
+
+.screen_2{
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;  /* ✅ Positivo, no negativo */
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.screen_2 .card{
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screen_2 .image-container{
+    width: 30%;
+    height: 100%;
+    display: flex;  /* ✅ Nuevo */
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+}
+
+.screen_2 .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    max-width: 100%;
+    border: none;
+    border-radius: 1rem;
+}
+
+.about_me_card{
+    width: 70%;
+    height: 100%;
+    font-size: 1.3rem;
+    padding: 5%;
+    text-align: justify;
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.screen_3{
+    width: 100%;
+    height: 100vh;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school-container{
+    width: 90%;
+    height: 55%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school{
+    width: 20%;
+    height: 100%;
+    border-radius: 1rem;
+    box-shadow:  12px 12px 9px #1E1A4D;
+    transition: all 300ms ease;
+    overflow: hidden;
+    display: flex;
+}
+.school:hover{
+    cursor: pointer;
+    transform: translateY(-10%);
+}
