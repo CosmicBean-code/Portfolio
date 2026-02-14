@@ -306,3 +306,34 @@ h1 a{
     cursor: pointer;
     transform: translateY(-10%);
 }
+.school img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+}
+.school h2{
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 60%;
+    padding: 0.5rem;
+}
+.school p{
+    width: 100%;
+    height: 25%;
+    padding: 0.5rem;
+    text-align: justify;
+    font-size: 0.6rem;
+}
+
+.screen_4{
+    width: 100%;
+    height: 100vh;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
